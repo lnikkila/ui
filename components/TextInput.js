@@ -5,6 +5,14 @@ import { connectStyle } from '@shoutem/theme';
 import { connectAnimation } from '@shoutem/animation';
 
 class TextInput extends Component {
+  clear() {
+    this.refs.field.clear();
+  }
+
+  focus() {
+    this.refs.field.focus();
+  }
+
   render() {
     const { props } = this;
     const style = {
