@@ -16,6 +16,7 @@ class TextInput extends Component {
     console.log(JSON.stringify(style));
     return (
       <RNTextInput
+        ref="field"
         {...props}
         style={style}
         placeholderTextColor={props.style.placeholderTextColor}
@@ -31,7 +32,9 @@ TextInput.propTypes = {
 };
 
 const AnimatedTextInput = connectAnimation(TextInput);
-const StyledTextInput = connectStyle('shoutem.ui.TextInput')(AnimatedTextInput);
+const StyledTextInput = connectStyle('shoutem.ui.TextInput', {}, null, {
+  withRef: true
+})(AnimatedTextInput);
 
 export {
   StyledTextInput as TextInput,
