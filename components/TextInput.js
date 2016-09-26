@@ -41,7 +41,7 @@ TextInput.propTypes = {
 const AnimatedTextInput = connectAnimation(TextInput);
 const StyledTextInput = connectStyle('shoutem.ui.TextInput', {}, null, {
   withRef: true
-})(AnimatedTextInput);
+})(TextInput);
 
 export {
   StyledTextInput as TextInput,
